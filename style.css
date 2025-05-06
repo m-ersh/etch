@@ -1,0 +1,13 @@
+
+
+
+.container {
+    display: flex;
+}
+
+.divs {
+    display: flex;
+    justify-content: space-evenly;
+    border: 5px;
+    border-color: black;
+}
