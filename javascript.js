@@ -12,6 +12,10 @@
 
 const squares = 256;
 
+const button = document.createElement("button");
+button.classList.add("buton");
+document.body.appendChild(button);
+
 const container = document.createElement("div");
 container.classList.add("container")
 document.body.appendChild(container);
