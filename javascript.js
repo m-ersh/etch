@@ -24,9 +24,9 @@ function findNearestSquare(totalSquares) {
 function addSquares() {
     container.innerHTML = "";
     let nearestSquare = findNearestSquare(squares);
-    let columns = Math.ceil(Math.sqrt(nearestSquare));
-    let rows = Math.ceil(nearestSquare / columns);
-    
+    let columns = Math.ceil(Math.sqrt(squares));
+    let rows = Math.ceil(squares / columns);
+
     for (let i = 0; i < squares; i++) {
         const divs = document.createElement("div");
         divs.classList.add("divs");
@@ -45,6 +45,13 @@ function changeSquares() {
     button.addEventListener("click", () => {
         let newSquares = prompt("How many squares do you want?");
         let total = parseInt(newSquares);
+        let newSquaresRoot = Math.sqrt(total);
+        if (!isNaN(total) && total > 0) {
+            let root = Math.sqrt(total);
+            if (!Number.isInteger(root)) {
+                total = Math.ceil(root) ** 2;
+            }
+        }
         squares = total;
         addSquares();
     });
