@@ -1,13 +1,33 @@
 
 
 
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+}
+
+
+button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 .container {
     display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    height: 800px;
+    border: 2px solid black;
 }
 
 .divs {
-    display: flex;
-    justify-content: space-evenly;
-    border: 5px;
-    border-color: black;
+    width: calc(100% / 16); 
+    height: calc(100% / 16);
+    border: 1px solid black;
+    box-sizing: border-box;
 }
