@@ -14,16 +14,8 @@ const background = (divs) => {
     divs.style.backgroundColor = "#" + randomColor;
 };
 
-
-function findNearestSquare(totalSquares) {
-    let root = Math.round(Math.sqrt(totalSquares));
-    let nearestSquare = root * root;
-    return nearestSquare;
-};
-
 function addSquares() {
     container.innerHTML = "";
-    let nearestSquare = findNearestSquare(squares);
     let columns = Math.ceil(Math.sqrt(squares));
     let rows = Math.ceil(squares / columns);
 
